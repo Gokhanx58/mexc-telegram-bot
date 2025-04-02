@@ -4,11 +4,11 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 
 # Buraya kendi API anahtarlarını gir
 MEXC_API_URL = "https://api.mexc.com/api/v3/ticker/price?symbol="
-TELEGRAM_BOT_TOKEN = "BOTFATHER'DAN ALDIĞIN TOKENİ BURAYA YAPIŞTIR"
+TELEGRAM_BOT_TOKEN = "AAE5bYGqjA6R8tWGUtbl9acH4g3RhcYSyBc"
 
 # Telegram botunun komutları
 def start(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text("📈 MEXC Trade Bot'a hoş geldin!\nBir işlem çifti girerek analiz alabilirsin.\nÖrnek: /price BTCUSDT")
+    update.message.reply_text("📈 KRİPTO ÇOBANI Trade Bot'a hoş geldin!\nBir işlem çifti girerek analiz alabilirsin.\nÖrnek: /price BTCUSDT")
 
 def get_price(update: Update, context: CallbackContext) -> None:
     if not context.args:
@@ -37,3 +37,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+pip install python-telegram-bot requests
+python bot.py
